@@ -5,14 +5,14 @@ random_phase = build_random_phrase_list()
 
 
 def hello(name):
-    return '''hello {}\n My name is PyBot'''.format(name)
+    return '''hello {}\nMy name is PyBot'''.format(name)
 
 
 def cool_bro(wtd):
-    return '''That is cool broski!\n {} is one of my favorite things to do!'''.format(
+    return '''That is cool broski!\n{} is one of my favorite things to do!'''.format(
         wtd)
 
 
 def randomMessage(inputs):
     if inputs != "bye":
-        print(random_phase)
+        print(random_phrase)
