@@ -11,6 +11,7 @@ def cool_bro(wtd):
         wtd)
 
 
-def randomMessage():
+def random_message():
     random_phase = choice(build_random_phrase_list())
     return random_phase
+        
