@@ -10,4 +10,9 @@ def build_random_phrase_list():
         list.append(i)
     return list
 
+def append_phrases(phrase):
+    list = build_random_phrase_list()
+    if phrase not in list:
+        with open('bot.txt', 'a') as file:
+            file.write(phrase)
 
