@@ -3,10 +3,11 @@ def read_txt_file():
         contents = file.read()
     return contents
 
-def build_random_phrase_dict():
+def build_random_phrase_list():
     list = []
     contents = read_txt_file()
     for i in contents:
         list.append(i)
     return list
+
 
