@@ -17,9 +17,21 @@ def wyd():
             print("Goodbye")
 
 
+def crazy_talk():
+    active = True
+    while (active is True):
+        text = input("What's on your mind? ")
+        if text.lower() != "bye" or "goodbye":
+            print(random_message())
+        else:
+            active = False
+            print("See ya later alligator")
+
+
 def main():
     greeting()
-    wyd()
+    # wyd()
+    crazy_talk()
 
 
 if __name__ == "__main__":
