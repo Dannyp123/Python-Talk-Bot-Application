@@ -5,7 +5,7 @@ def read_txt_file():
 
 def build_random_phrase_list():
     list = []
-    contents = read_txt_file()
+    contents = read_txt_file().split('\n')
     for i in contents:
         list.append(i)
     return list

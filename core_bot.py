@@ -1,8 +1,6 @@
 from bot_disk import *
 from random import choice
 
-random_phase = build_random_phrase_list()
-
 
 def hello(name):
     return '''hello {}\nMy name is PyBot'''.format(name)
@@ -13,6 +11,6 @@ def cool_bro(wtd):
         wtd)
 
 
-def randomMessage(inputs):
-    if inputs != "bye":
-        print(random_phrase)
+def randomMessage():
+    random_phase = choice(build_random_phrase_list())
+    return random_phase
