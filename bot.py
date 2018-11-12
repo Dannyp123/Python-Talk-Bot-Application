@@ -21,7 +21,7 @@ def crazy_talk():
     active = True
     while (active is True):
         text = input("What's on your mind? ")
-        if text.lower() != "bye" or "goodbye":
+        if text.lower() != "bye":
             print(random_message())
         else:
             active = False
