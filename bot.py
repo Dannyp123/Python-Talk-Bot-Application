@@ -7,8 +7,15 @@ def greeting():
 
 
 def wyd():
-    what_are_they_doing = input("What are you doing? ")
-    print(cool_bro(what_are_they_doing))
+    active = True
+    while (active is True):
+        what_are_they_doing = input("What are you doing? ")
+        if what_are_they_doing.lower() != "bye":
+            print(cool_bro(what_are_they_doing))
+        else:
+            active = False
+            print("Goodbye")
+
 
 def main():
     greeting()
