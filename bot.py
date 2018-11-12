@@ -35,12 +35,12 @@ def wyd():
 def crazy_talk():
     active = True
     while (active is True):
-        text = input("What's on your mind? ")
+        text = input(">>> ")
         if text.lower() != "bye":
             print(random_message() + "\n")
         else:
             active = False
-            print("See ya later alligator")
+            print("\nSee ya later alligator")
 
 
 def main():
