@@ -3,7 +3,7 @@ from random import choice
 
 
 def hello(name):
-    return '''hello {}\nMy name is PyBot'''.format(name)
+    return '''Hello {}\nMy name is Talk-E!'''.format(name)
 
 
 def cool_bro(wtd):
@@ -14,4 +14,3 @@ def cool_bro(wtd):
 def random_message():
     random_phase = choice(build_random_phrase_list())
     return random_phase
-        

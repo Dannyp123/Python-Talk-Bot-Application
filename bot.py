@@ -2,6 +2,21 @@ from core_bot import *
 
 
 def greeting():
+    # print('_____    _____')
+    # print('|    \\  /     |')
+    # print('|___0|  |0____|')
+    # print('     \\  /')
+    # print('  ___|__|___')
+    # print('  |  ')
+    print(
+        '''_________    ________      ___           ___  __                       _______
+|\___   ___\ |\   __  \    |\  \         |\  \|\  \                    |\  ___ \\
+\|___ \  \_| \ \  \|\  \   \ \  \        \ \  \/  /|_    ____________  \ \   __/|
+    \ \  \   \ \   __  \   \ \  \        \ \   ___  \  |\____________\ \ \  \_|/__
+     \ \  \   \ \  \ \  \   \ \  \____    \ \  \\\\ \  \ \|____________|  \ \  \_|\ \\
+      \ \__\   \ \__\ \__\   \ \_______\   \ \__\\\\ \__\                  \ \_______\\
+       \|__|    \|__|\|__|    \|_______|    \|__| \|__|                   \|_______|
+''')
     name = input("What's your name? ")
     print(hello(name))
 
@@ -22,7 +37,7 @@ def crazy_talk():
     while (active is True):
         text = input("What's on your mind? ")
         if text.lower() != "bye":
-            print(random_message())
+            print(random_message() + "\n")
         else:
             active = False
             print("See ya later alligator")
