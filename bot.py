@@ -85,12 +85,12 @@ def help_menu():
             print(age())
 
         elif text == "2":
-            # print('{}'.format(os.system('curl -H "Accept: text/plain" https://icanhazdadjoke.com/')))
-            # response = requests.get('https://icanhazdadjoke.com/')
-            # print(response.headers)
-            # url = 'https://icanhazdadjoke.com/'
-            # headers = {'Content-Type': 'text/plain'}
-            # print(requests.get(url, headers=headers).content)
+            url = 'https://icanhazdadjoke.com/'
+            headers = {'Accept': 'application/json'}
+            json = requests.get(url, headers=headers).json()
+            print(json['joke'])
+            
+            # os.system('curl -H "Accept: text/plain" https://icanhazdadjoke.com/')
 
         elif text == "3":
             active = False
