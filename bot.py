@@ -39,7 +39,7 @@ def crazy_talk():
         text = input(">>>: ").strip()
         if "1" in text.lower():
             print(age())
-        elif text.lower() != "bye":
+        elif text == "5":
             if random_message() is "":
                 print("No news is good news\n")
             else:
@@ -77,13 +77,13 @@ def help_menu():
         text = input(">>>: ")
         if text.lower() == "--h":
             print(
-                "\t- (1) for app's age\n\t- (2) for joke\n\t- (3) to leave\n\t- (4) for Bot Mini Game"
+                "\t- (1) for app's age\n\t- (2) for joke\n\t- (3) to leave\n\t- (4) for Bot Mini Game\n\t- (5) for a discussion with me"
             )
         elif text == "1":
             print(age())
 
         elif text == "2":
-            joke = phrase_dict()
+            pass
 
         elif text == "3":
             active = False
