@@ -5,9 +5,9 @@ from time import ctime
 
 def phrase_dict():
     phrases = {
-        'bye': ["See ya later aligator"],
-        'hi': ["Hello"],
-        'joke': [
+        'bye': ["See ya later aligator", "Adios", "Goodbye", "Bye"],
+        'hi': ["Hello", "What's up", "Hola"],
+        '#joke': [
             'How many apples grow on a tree? All of them.',
             'What do you call an elf that can sing? A wrapper.',
             "Want to hear a joke about construction? I'm still working on it.",
@@ -30,8 +30,8 @@ def cool_bro(wtd):
 
 
 def random_message():
-    random_phase = choice(build_random_phrase_list())
-    return random_phase
+    random_phrase = choice(build_random_phrase_list())
+    return random_phrase
 
 
 def guessing_game(text):
