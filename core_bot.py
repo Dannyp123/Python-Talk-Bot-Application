@@ -15,8 +15,7 @@ def phrase_dict():
             "My dog used to chase people on a bike a lot. It got so bad, finally I had to take his bike away.",
             "Can February March? No, but April May.",
             "Did you know the first French fries weren't actually cooked in France? They were cooked in Greece.",
-            "What do you call a pig that knows karate. Pork chop!",
-            "MY LIFE"
+            "What do you call a pig that knows karate. Pork chop!", "MY LIFE"
         ]
     }
 
@@ -31,8 +30,8 @@ def cool_bro(wtd):
 
 
 def random_message():
-    random_phase = choice(build_random_phrase_list())
-    return random_phase
+    random_phrase = choice(build_random_phrase_list())
+    return random_phrase
 
 
 def guessing_game(text):
@@ -43,7 +42,6 @@ def guessing_game(text):
         return False
 
 
-def age(text):
-    if "age" in text:
+def age():
         time = ctime()
         return "I'm {} years old!".format(int(time.split()[-1]) - 2018)
