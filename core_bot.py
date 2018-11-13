@@ -18,6 +18,7 @@ def phrase_dict():
             "What do you call a pig that knows karate. Pork chop!", "MY LIFE"
         ]
     }
+    return phrases
 
 
 def hello(name):
