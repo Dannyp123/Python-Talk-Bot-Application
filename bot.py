@@ -21,7 +21,11 @@ def greeting():
        \|__|    \|__|\|__|    \|_______|    \|__| \|__|                   \|_______|
 ''')
     name = input("What's your name? ")
-    print(hello(name))
+    if name in ["Talk-E", "talk-e", "TALK-E", "Talk-e"]:
+        print('''OMG... That is my name''' + '\n')
+        print('''Anyways, {} nice to meet you\n'''.format(hello(name)))
+    else:
+        print(hello(name))
 
 
 def home_screen():
