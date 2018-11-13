@@ -92,9 +92,11 @@ def help_menu():
 
         elif text == "4":
             play_the_guessing_game()
-        
+
         elif text == '5':
             os.system('curl parrot.live')
+        else:
+            print(random_message())
 
 
 def main():
