@@ -20,9 +20,9 @@ def greeting():
        \|__|    \|__|\|__|    \|_______|    \|__| \|__|                   \|_______|
 ''')
     name = input("What's your name? ")
-    if name in ["Talk-E", "talk-e", "TALK-E"]:
-        print("OMG... we must be family")
-        print('''Anyways {}'''.format(hello(name)))
+    if name in ["Talk-E", "talk-e", "TALK-E", "Talk-e"]:
+        print('\n' + "OMG... we must be family")
+        print('''Anyways, {}'''.format(hello(name)) + '\n')
     else:
         print(hello(name))
 
