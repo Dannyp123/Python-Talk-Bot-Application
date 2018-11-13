@@ -18,7 +18,7 @@ def random_message():
 
 def guessing_game(text):
     num = randint(1, 15)
-    if text == num:
+    if int(text) == num:
         return True
     else:
         return False
