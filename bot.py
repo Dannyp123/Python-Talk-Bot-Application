@@ -55,6 +55,7 @@ def play_the_guessing_game():
     active = True
     print("Guess the number!")
     while (active is True):
+        print()
         text = input(">>> ")
         if int(text) <= 15 and int(text) == num:
             print("Good Job!")
@@ -86,7 +87,7 @@ def help_menu():
 
         elif text == "3":
             active = False
-            print("Goodbye")
+            print("\n" + "Goodbye" + "\n")
 
         elif text == "4":
             play_the_guessing_game()
