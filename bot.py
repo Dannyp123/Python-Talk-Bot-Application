@@ -38,7 +38,7 @@ def crazy_talk():
         text = input(">>> ")
         if text.lower() != "bye":
             if random_message() is "":
-                print("No news is good news")
+                print("No news is good news\n")
             else:
                 print(random_message() + "\n")
         else:
