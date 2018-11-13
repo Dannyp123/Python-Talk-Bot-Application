@@ -14,7 +14,7 @@ def greeting():
 |\___   ___\ |\   __  \    |\  \         |\  \|\  \                    |\  ___ \\
 \|___ \  \_| \ \  \|\  \   \ \  \        \ \  \/  /|_    ____________  \ \   __/|
     \ \  \   \ \   __  \   \ \  \        \ \   ___  \  |\____________\ \ \  \_|/__
-     \ \  \   \ \  \ \  \   \ \  \____    \ \  \\\\ \  \ \|____________|  \ \  \_|\ \\
+     \ \     \ \  \ \  \   \ \  \____    \ \  \\\\ \  \ \|____________|  \ \  \_|\ \\
       \ \__\   \ \__\ \__\   \ \_______\   \ \__\\\\ \__\                  \ \_______\\
        \|__|    \|__|\|__|    \|_______|    \|__| \|__|                   \|_______|
 ''')
@@ -50,6 +50,7 @@ def crazy_talk():
 
 
 def play_the_guessing_game():
+    lives = 5
     active = True
     print("Guess the number!")
     while (active is True):
@@ -58,7 +59,12 @@ def play_the_guessing_game():
             print("Good Job!")
             active = False
         else:
-            print("Try again!")
+            num = guessing_game(text)
+            print("Sorry...Try again!")
+            lives = lives - 1
+            if lives == 0:
+                active = False
+                print('''The winning number was {}'''.format(num))
 
 
 def help_menu():
