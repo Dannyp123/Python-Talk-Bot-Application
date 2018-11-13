@@ -5,9 +5,8 @@ from time import ctime
 
 def phrase_dict():
     phrases = {
-            'joke': ['How many apples grow on a tree? All of them.', 'What do you call an elf that can sing? A wrapper.', "Want to hear a joke about construction? I'm still working on it.", "The shovel was a ground-breaking invention.", "My dog used to chase people on a bike a lot. It got so bad, finally I had to take his bike away.", "Can February March? No, but April May.", "Did you know the first French fries weren't actually cooked in France? They were cooked in Greece.", "What do you call a pig that knows karate. Pork chop!", "My Creator Cody is a noob and a scrub."],
-            'bye': ["See ya later aligator"],
-            'hi': ["Hello"]
+        'bye': ["See ya later aligator"],
+        'hi': ["Hello"]
         'joke': [
             'How many apples grow on a tree? All of them.',
             'What do you call an elf that can sing? A wrapper.',
