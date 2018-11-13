@@ -77,7 +77,7 @@ def help_menu():
         text = input(">>>: ")
         if text.lower() == "--h":
             print(
-                "\t- (1) for app's age\n\t- (2) for joke\n\t- (3) to leave\n\t- (4) for Bot Mini Game"
+                "\t- (1) for app's age\n\t- (2) for joke\n\t- (3) to leave\n\t- (4) for Bot Mini Game\n\t- (5) for a party!"
             )
         elif text == "1":
             print(age())
@@ -91,6 +91,8 @@ def help_menu():
 
         elif text == "4":
             play_the_guessing_game()
+        elif text == "5":
+
 
 
 def main():
