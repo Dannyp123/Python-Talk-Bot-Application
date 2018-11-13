@@ -72,6 +72,37 @@ def play_the_guessing_game():
                 print('''The winning number was {}'''.format(num))
 
 
+def help_menu():
+    active = True
+    print("? for help menu")
+    while (active is True):
+        text = input(">>>: ")
+        if text.lower() == "?":
+            print(
+                "\t- (1) for app's age\n\t- (2) for joke\n\t- (3) to leave\n\t- (4) for Bot Mini Game\n\t- (5) for a discussion with me"
+            )
+        elif text == "1":
+            print(age())
+
+        elif text == "2":
+            url = 'https://icanhazdadjoke.com/'
+            headers = {'Accept': 'application/json'}
+            json = requests.get(url, headers=headers).json()
+            print(json['joke'])
+            
+        elif text == "3":
+            active = False
+            print("\n" + "Goodbye" + "\n")
+
+        elif text == "4":
+            play_the_guessing_game()
+
+        elif text == '5':
+            os.system('curl parrot.live')
+        else:
+            print(random_message())
+
+
 def main():
     home_screen()
 
