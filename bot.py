@@ -83,7 +83,11 @@ def help_menu():
             print(age())
 
         elif text == "2":
+<<<<<<< HEAD
             pass
+=======
+            print(get_jokes())
+>>>>>>> 0bc4f69caf8677896bc77ca85aaf99332efb8d33
 
         elif text == "3":
             active = False
