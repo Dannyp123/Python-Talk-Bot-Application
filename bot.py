@@ -1,5 +1,6 @@
 from core_bot import *
 import os
+import requests
 
 
 def greeting():
@@ -87,7 +88,12 @@ def help_menu():
             print(age())
 
         elif text == "2":
-            print(get_jokes())
+            # print('{}'.format(os.system('curl -H "Accept: text/plain" https://icanhazdadjoke.com/')))
+            # response = requests.get('https://icanhazdadjoke.com/')
+            # print(response.headers)
+            # url = 'https://icanhazdadjoke.com/'
+            # headers = {'Content-Type': 'text/plain'}
+            # print(requests.get(url, headers=headers).content)
 
         elif text == "3":
             active = False
