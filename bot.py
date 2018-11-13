@@ -22,33 +22,30 @@ def greeting():
     name = input("What's your name? ")
     print(hello(name))
 
-
-def wyd():
+def home_screen():
+    greeting()
     active = True
     while (active is True):
-        what_are_they_doing = input("What are you doing? ")
-        if what_are_they_doing.lower() != "bye":
-            print(cool_bro(what_are_they_doing))
-        else:
-            active = False
-            print("Goodbye")
-
-
-def crazy_talk():
-    active = True
-    while (active is True):
-        text = input(">>>: ").strip()
-        if "1" in text.lower():
+        text = input("\t- (1) To find out how old I am!\n\t- (2) If you would like to hear a joke!\n\t- (3) If you wanna throw a party!\n\t- (4) If you would like to play a game!\n\t- (5) If you would like to leave!\n>>>: ")
+                
+        if text == "1":
             print(age())
-        elif text == "5":
-            if random_message() is "":
-                print("No news is good news\n")
-            else:
-                print(random_message() + "\n")
-        else:
-            active = False
-            print("\nSee ya later alligator")
 
+        elif text == "2":
+            print(get_jokes())
+
+        elif text == "3":
+            os.system('curl parrot.live')
+            
+
+        elif text == "4":
+            play_the_guessing_game()
+
+        elif text == '5':
+            active = False
+            print("\n" + "Goodbye" + "\n")
+        else:
+            print(random_message())
 
 def play_the_guessing_game():
     lives = 5
@@ -71,39 +68,9 @@ def play_the_guessing_game():
                 print('''The winning number was {}'''.format(num))
 
 
-def help_menu():
-    active = True
-    print("? for help menu")
-    while (active is True):
-        text = input(">>>: ")
-        if text.lower() == "?":
-            print(
-                "\t- (1) for app's age\n\t- (2) for joke\n\t- (3) to leave\n\t- (4) for Bot Mini Game\n\t- (5) for a discussion with me"
-            )
-        elif text == "1":
-            print(age())
-
-        elif text == "2":
-            print(get_jokes())
-
-        elif text == "3":
-            active = False
-            print("\n" + "Goodbye" + "\n")
-
-        elif text == "4":
-            play_the_guessing_game()
-
-        elif text == '5':
-            os.system('curl parrot.live')
-        else:
-            print(random_message())
-
 
 def main():
-    greeting()
-    # wyd()
-    # crazy_talk()
-    help_menu()
+    home_screen()
 
 
 if __name__ == "__main__":
