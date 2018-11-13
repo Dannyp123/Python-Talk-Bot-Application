@@ -35,7 +35,7 @@ def wyd():
 def crazy_talk():
     active = True
     while (active is True):
-        text = input(">>> ")
+        text = input(">>>: ")
         if text.lower() != "bye":
             if random_message() is "":
                 print("No news is good news\n")
@@ -46,10 +46,23 @@ def crazy_talk():
             print("\nSee ya later alligator")
 
 
+def play_the_guessing_game():
+    active = True
+    print("Guess the number!")
+    while (active is True):
+        text = input(">>>: ")
+        if guessing_game(text) == True:
+            print("Good Job!")
+            active = False
+        else:
+            print("Try again!")
+
+
 def main():
     greeting()
     # wyd()
-    crazy_talk()
+    # crazy_talk()
+    play_the_guessing_game()
 
 
 if __name__ == "__main__":
