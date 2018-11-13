@@ -20,34 +20,37 @@ def greeting():
        \|__|    \|__|\|__|    \|_______|    \|__| \|__|                   \|_______|
 ''')
     name = input("What's your name? ")
-    print(hello(name))
+    if name in ["Talk-E", "talk-e", "TALK-E"]:
+        print("OMG... we must be family")
+        print('''Anyways {}'''.format(hello(name)))
+    else:
+        print(hello(name))
 
 
-def wyd():
-    active = True
-    while (active is True):
-        what_are_they_doing = input("What are you doing? ")
-        if what_are_they_doing.lower() != "bye":
-            print(cool_bro(what_are_they_doing))
-        else:
-            active = False
-            print("Goodbye")
+# def wyd():
+#     active = True
+#     while (active is True):
+#         what_are_they_doing = input("What are you doing? ")
+#         if what_are_they_doing.lower() != "bye":
+#             print(cool_bro(what_are_they_doing))
+#         else:
+#             active = False
+#             print("Goodbye")
 
-
-def crazy_talk():
-    active = True
-    while (active is True):
-        text = input(">>>: ").strip()
-        if "1" in text.lower():
-            print(age())
-        elif text == "5":
-            if random_message() is "":
-                print("No news is good news\n")
-            else:
-                print(random_message() + "\n")
-        else:
-            active = False
-            print("\nSee ya later alligator")
+# def crazy_talk():
+#     active = True
+#     while (active is True):
+#         text = input(">>>: ").strip()
+#         if "1" in text.lower():
+#             print(age())
+#         elif text == "5":
+#             if random_message() is "":
+#                 print("No news is good news\n")
+#             else:
+#                 print(random_message() + "\n")
+#         else:
+#             active = False
+#             print("\nSee ya later alligator")
 
 
 def play_the_guessing_game():
@@ -78,7 +81,7 @@ def help_menu():
         text = input(">>>: ")
         if text.lower() == "?":
             print(
-                "\t- (1) for app's age\n\t- (2) for joke\n\t- (3) to leave\n\t- (4) for Bot Mini Game\n\t- (5) for a discussion with me"
+                "\t- (1) for app's age\n\t- (2) for joke\n\t- (3) to leave\n\t- (4) for Bot Mini Game\n\t- (5) for an highly enjoyed time"
             )
         elif text == "1":
             print(age())
