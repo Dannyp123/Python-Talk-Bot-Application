@@ -23,12 +23,15 @@ def greeting():
     name = input("What's your name? ")
     print(hello(name))
 
+
 def home_screen():
     greeting()
     active = True
     while (active is True):
-        text = input("\t- (1) To find out how old I am!\n\t- (2) If you would like to hear a joke!\n\t- (3) If you wanna throw a party!\n\t- (4) If you would like to play a game!\n\t- (5) If you would like to leave!\n>>>: ")
-                
+        text = input(
+            "\t- (1) To find out how old I am!\n\t- (2) If you would like to hear a joke!\n\t- (3) If you wanna throw a party!(CTRL+C to stop the party!)\n\t- (4) If you would like to play a game!\n\t- (5) If you would like to leave!\n\tOr just talk to me!\n>>>: "
+        )
+
         if text == "1":
             print(age())
 
@@ -37,7 +40,6 @@ def home_screen():
 
         elif text == "3":
             os.system('curl parrot.live')
-            
 
         elif text == "4":
             play_the_guessing_game()
@@ -47,6 +49,7 @@ def home_screen():
             print("\n" + "Goodbye" + "\n")
         else:
             print(random_message())
+
 
 def play_the_guessing_game():
     lives = 5
@@ -67,7 +70,6 @@ def play_the_guessing_game():
             if lives == 0:
                 active = False
                 print('''The winning number was {}'''.format(num))
-
 
 
 def main():
