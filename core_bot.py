@@ -21,6 +21,13 @@ def phrase_dict():
     return phrases
 
 
+def get_jokes():
+    phrases = phrase_dict()
+    jokes = phrases["#joke"]
+    i = randint(0, len(jokes))
+    return jokes[i]
+
+
 def hello(name):
     return '''Hello {}\nMy name is Talk-E!'''.format(name)
 
@@ -44,5 +51,5 @@ def guessing_game(text):
 
 
 def age():
-        time = ctime()
-        return "I'm {} years old!".format(int(time.split()[-1]) - 2018)
+    time = ctime()
+    return "I'm {} years old!".format(int(time.split()[-1]) - 2018)
