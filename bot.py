@@ -1,4 +1,5 @@
 from core_bot import *
+import os
 
 
 def greeting():
@@ -39,7 +40,7 @@ def crazy_talk():
         text = input(">>>: ").strip()
         if "1" in text.lower():
             print(age())
-        elif text.lower() != "bye":
+        elif text == "5":
             if random_message() is "":
                 print("No news is good news\n")
             else:
@@ -77,7 +78,7 @@ def help_menu():
         text = input(">>>: ")
         if text.lower() == "--h":
             print(
-                "\t- (1) for app's age\n\t- (2) for joke\n\t- (3) to leave\n\t- (4) for Bot Mini Game\n\t- (5) for a party!"
+                "\t- (1) for app's age\n\t- (2) for joke\n\t- (3) to leave\n\t- (4) for Bot Mini Game\n\t- (5) for a discussion with me"
             )
         elif text == "1":
             print(age())
@@ -91,8 +92,9 @@ def help_menu():
 
         elif text == "4":
             play_the_guessing_game()
-        elif text == "5":
-
+        
+        elif text == '5':
+            os.system('curl parrot.live')
 
 
 def main():
