@@ -37,7 +37,7 @@ def crazy_talk():
     active = True
     while (active is True):
         text = input(">>>: ").strip()
-        if "#age" in text.lower():
+        if "1" in text.lower():
             print(age())
         elif text.lower() != "bye":
             if random_message() is "":
@@ -76,20 +76,26 @@ def help_menu():
         text = input(">>>: ")
         if text.lower() == "--h":
             print(
-                "\t- #age for app's age\n\t- #joke for joke\n\t- any text besides '#age', '#joke','--h' will generate a random phrase\n\t- bye to leave"
+                "\t- (1) for app's age\n\t- (2) for joke\n\t- (3) to leave\n\t- (4) for Bot Mini Game"
             )
-        elif text.lower() == "bye":
+        elif text == "1":
+            print(age())
+
+        elif text == "2":
+            phrase_dict()
+
+        elif text == "3":
             active = False
             print("Goodbye")
-        else:
-            print("okay")
+
+        elif text == "4":
+            play_the_guessing_game()
 
 
 def main():
     greeting()
     # wyd()
     # crazy_talk()
-    # play_the_guessing_game()
     help_menu()
 
 
