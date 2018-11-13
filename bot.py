@@ -29,7 +29,7 @@ def home_screen():
     active = True
     while (active is True):
         text = input(
-            "\t- (1) To find out how old I am!\n\t- (2) If you would like to hear a joke!\n\t- (3) If you wanna throw a party!(CTRL+C to stop the party!)\n\t- (4) If you would like to play a game!\n\t- (5) If you would like to leave!\n\tOr just talk to me!\n>>>: "
+            "\t- (1) To find out how old I am!\n\t- (2) If you would like to hear a joke!\n\t- (3) If you wanna throw a party! (CTRL+C to stop the party!)\n\t- (4) If you would like to play a game!\n\t- (5) If you would like to leave!\n\tOr just talk to me!\n>>>: "
         )
 
         if text == "1":
