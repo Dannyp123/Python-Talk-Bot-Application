@@ -13,8 +13,7 @@ def phrase_dict():
             "My dog used to chase people on a bike a lot. It got so bad, finally I had to take his bike away.",
             "Can February March? No, but April May.",
             "Did you know the first French fries weren't actually cooked in France? They were cooked in Greece.",
-            "What do you call a pig that knows karate. Pork chop!",
-            "MY LIFE"
+            "What do you call a pig that knows karate. Pork chop!", "MY LIFE"
         ]
     }
 
@@ -33,7 +32,7 @@ def random_message():
     return random_phase
 
 
-def guessing_game(text):
+def guessing_game(text, num):
     num = randint(1, 15)
     if int(text) == num:
         return True
