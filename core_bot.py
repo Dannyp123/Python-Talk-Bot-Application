@@ -5,6 +5,8 @@ from time import ctime
 
 def phrase_dict():
     phrases = {
+        'bye': ["See ya later aligator"],
+        'hi': ["Hello"]
         'joke': [
             'How many apples grow on a tree? All of them.',
             'What do you call an elf that can sing? A wrapper.',
