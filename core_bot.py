@@ -30,8 +30,8 @@ def cool_bro(wtd):
 
 
 def random_message():
-    random_phase = choice(build_random_phrase_list())
-    return random_phase
+    random_phrase = choice(build_random_phrase_list())
+    return random_phrase
 
 
 def guessing_game(text):
