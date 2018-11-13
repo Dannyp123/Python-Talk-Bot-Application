@@ -55,12 +55,12 @@ def play_the_guessing_game():
     lives = 5
     num = randint(1, 15)
     active = True
-    print("Guess the number!")
+    print("Guess the number that is from 1 to 15 ONLY!")
     while (active is True):
         print()
         text = input(">>> ")
-        if int(text) <= 15 and int(text) == num:
-            print("Good Job!")
+        if int(text) == num:
+            print("Good Job You Guessed It!")
             active = False
         elif int(text) > 15:
             print("number must be between 1 and 15")
