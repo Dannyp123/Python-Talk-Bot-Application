@@ -82,7 +82,7 @@ def help_menu():
             print(age())
 
         elif text == "2":
-            joke = phrase_dict()
+            print(get_jokes())
 
         elif text == "3":
             active = False
