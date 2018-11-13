@@ -74,10 +74,10 @@ def play_the_guessing_game():
 
 def help_menu():
     active = True
-    print("--h for help menu")
+    print("? for help menu")
     while (active is True):
         text = input(">>>: ")
-        if text.lower() == "--h":
+        if text.lower() == "?":
             print(
                 "\t- (1) for app's age\n\t- (2) for joke\n\t- (3) to leave\n\t- (4) for Bot Mini Game\n\t- (5) for a discussion with me"
             )
@@ -98,9 +98,11 @@ def help_menu():
 
         elif text == "4":
             play_the_guessing_game()
-        
+
         elif text == '5':
             os.system('curl parrot.live')
+        else:
+            print(random_message())
 
 
 def main():

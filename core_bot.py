@@ -21,8 +21,8 @@ def phrase_dict():
 
 def get_jokes():
     phrases = phrase_dict()
-    jokes = phrases["#joke"]
-    i = randint(0, len(jokes))
+    jokes = phrases["jokes"]
+    i = randint(0, (len(jokes) - 1))
     return jokes[i]
 
 
