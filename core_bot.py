@@ -41,7 +41,6 @@ def guessing_game(text):
         return False
 
 
-def age(text):
-    if "age" in text:
+def age():
         time = ctime()
         return "I'm {} years old!".format(int(time.split()[-1]) - 2018)
