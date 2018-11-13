@@ -42,15 +42,17 @@ def crazy_talk():
 
 def play_the_guessing_game():
     lives = 5
+    num = randint(1, 15)
     active = True
     print("Guess the number!")
     while (active is True):
-        text = input(">>>: ")
-        if guessing_game(text) == True:
+        text = input(">>> ")
+        if int(text) <= 15 and int(text) == num:
             print("Good Job!")
             active = False
+        elif int(text) > 15:
+            print("number must be between 1 and 15")
         else:
-            num = guessing_game(text)
             print("Sorry...Try again!")
             lives = lives - 1
             if lives == 0:

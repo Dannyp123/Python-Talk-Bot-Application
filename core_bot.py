@@ -6,7 +6,7 @@ from time import ctime
 def phrase_dict():
     phrases = {
         'bye': ["See ya later aligator"],
-        'hi': ["Hello"]
+        'hi': ["Hello"],
         'joke': [
             'How many apples grow on a tree? All of them.',
             'What do you call an elf that can sing? A wrapper.',
@@ -34,7 +34,7 @@ def random_message():
     return random_phase
 
 
-def guessing_game(text, num):
+def guessing_game(text):
     num = randint(1, 15)
     if int(text) == num:
         return True
