@@ -24,31 +24,31 @@ def greeting():
     print(hello(name))
 
 
-def wyd():
+def home_screen():
+    greeting()
     active = True
     while (active is True):
-        what_are_they_doing = input("What are you doing? ")
-        if what_are_they_doing.lower() != "bye":
-            print(cool_bro(what_are_they_doing))
-        else:
-            active = False
-            print("Goodbye")
+        text = input(
+            "\t- (1) To find out how old I am!\n\t- (2) If you would like to hear a joke!\n\t- (3) If you wanna throw a party! (CTRL+C to stop the party!)\n\t- (4) If you would like to play a game!\n\t- (5) If you would like to leave!\n\tOr just talk to me!\n>>>: "
+        )
 
-
-def crazy_talk():
-    active = True
-    while (active is True):
-        text = input(">>>: ").strip()
-        if "1" in text.lower():
+        if text == "1":
             print(age())
-        elif text == "5":
-            if random_message() is "":
-                print("No news is good news\n")
-            else:
-                print(random_message() + "\n")
-        else:
+
+        elif text == "2":
+            print(get_jokes())
+
+        elif text == "3":
+            os.system('curl parrot.live')
+
+        elif text == "4":
+            play_the_guessing_game()
+
+        elif text == '5':
             active = False
-            print("\nSee ya later alligator")
+            print("\n" + "Goodbye" + "\n")
+        else:
+            print(random_message())
 
 
 def play_the_guessing_game():
@@ -90,8 +90,6 @@ def help_menu():
             json = requests.get(url, headers=headers).json()
             print(json['joke'])
             
-            # os.system('curl -H "Accept: text/plain" https://icanhazdadjoke.com/')
-
         elif text == "3":
             active = False
             print("\n" + "Goodbye" + "\n")
@@ -106,10 +104,7 @@ def help_menu():
 
 
 def main():
-    greeting()
-    # wyd()
-    # crazy_talk()
-    help_menu()
+    home_screen()
 
 
 if __name__ == "__main__":
