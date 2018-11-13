@@ -1,4 +1,5 @@
 from core_bot import *
+import os
 
 
 def greeting():
@@ -91,6 +92,9 @@ def help_menu():
 
         elif text == "4":
             play_the_guessing_game()
+        
+        elif text == '5':
+            os.system('curl parrot.live')
 
 
 def main():
