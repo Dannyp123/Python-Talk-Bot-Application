@@ -1,5 +1,6 @@
 from core_bot import *
 import os
+import requests
 
 
 def greeting():
