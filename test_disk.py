@@ -9,5 +9,9 @@ line
 line
 line
 '''})
-def test_read_txt_file() :
+def test_read_txt_file_1() :
     assert read_txt_file() == 'line\nline\nline\nline\n'
+
+@fake_file({'bot.txt': ''})
+def test_read_txt_file_2() :
+    assert read_txt_file() == ''
