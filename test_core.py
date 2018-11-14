@@ -64,3 +64,15 @@ def test_age():
     bot_age = age()
 
     assert phrase == bot_age
+
+@mock.patch('core_bot.randint')
+def test_guessing_game_1(fake_num):
+    fake_num.side_effect = [8]
+
+    assert guessing_game('8') == True
+
+@mock.patch('core_bot.randint')
+def test_guessing_game_2(fake_num):
+    fake_num.side_effect = [7]
+
+    assert guessing_game('8') == False
