@@ -4,6 +4,7 @@ from bcca.test import (
     fake_file,
 )
 
+
 @fake_file({'bot.txt': '''line
 line
 line
@@ -11,6 +12,7 @@ line
 '''})
 def test_read_txt_file_1():
     assert read_txt_file() == 'line\nline\nline\nline'
+
 
 @fake_file({'bot.txt': ''})
 def test_read_txt_file_2():
@@ -24,3 +26,8 @@ line
 '''})
 def test_build_random_phrase_list_1():
     assert build_random_phrase_list() == ['line', 'line', 'line', 'line']
+
+
+@fake_file({'bot.txt': ''})
+def test_build_random_phrase_list_2():
+    assert build_random_phrase_list() == ['']
