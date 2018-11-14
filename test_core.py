@@ -4,6 +4,7 @@ from bcca.test import (
     fake_file,
 )
 from unittest import mock
+from time import ctime
 
 def test_phrase_dict():
     list = phrase_dict()
@@ -54,3 +55,12 @@ def test_cool_bro_2():
     phrase = cool_bro(action)
 
     assert phrase == 'That is cool broski!\ncookies is one of my favorite things to do!'
+
+def test_age():
+    time = ctime()
+    time = int(time.split()[-1]) - 2018
+    phrase = "I'm {} years old!".format(time)
+
+    bot_age = age()
+
+    assert phrase == bot_age
