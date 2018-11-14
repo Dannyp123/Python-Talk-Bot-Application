@@ -26,3 +26,17 @@ def test_get_jokes_2(fake_num):
     joke = get_jokes()
 
     assert joke == 'How many apples grow on a tree? All of them.'
+
+def test_hello_1():
+    name = 'Bob'
+
+    greeting = hello(name)
+
+    assert greeting == 'Hello Bob\nMy name is Talk-E!'
+
+def test_hello_2():
+    name = 'Sara'
+
+    greeting = hello(name)
+
+    assert greeting == 'Hello Sara\nMy name is Talk-E!'
