@@ -43,3 +43,15 @@ def test_append_phrases_1():
     append_phrases(phrase2)
 
     assert open('bot.txt').read() == 'line1\nline2\nline3\nline4\n'
+
+@fake_file({'bot.txt': '''line1
+line2
+line3
+'''})
+def test_append_phrases_2():
+    phrase = 'line3'
+    phrase2 = 'line2'
+    append_phrases(phrase)
+    append_phrases(phrase2)
+
+    assert open('bot.txt').read() == 'line1\nline2\nline3\n'
