@@ -84,7 +84,7 @@ def play_the_guessing_game():
             if lives == 0:
                 active = False
                 print('''The winning number was {}'''.format(num))
-
+ 
 
 def main():
     home_screen()
