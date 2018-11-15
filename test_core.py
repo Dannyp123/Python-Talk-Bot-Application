@@ -42,14 +42,21 @@ def test_hello_2():
 
     assert greeting == 'Hello Sara\nMy name is Talk-E!'
 
-def test_age():
-    time = ctime()
-    time = int(time.split()[-1]) - 2018
-    phrase = "I'm {} years old!".format(time)
+@mock.patch('core_bot.ctime')
+def test_age_1(time):
+    time.side_effect =['2019'] 
 
     bot_age = age()
 
-    assert phrase == bot_age
+    assert bot_age == "I'm 1 years old!"
+
+@mock.patch('core_bot.ctime')
+def test_age_2(time):
+    time.side_effect =['2025'] 
+
+    bot_age = age()
+
+    assert bot_age == "I'm 7 years old!"
 
 @mock.patch('core_bot.randint')
 def test_guessing_game_1(fake_num):
