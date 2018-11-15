@@ -30,10 +30,6 @@ def hello(name):
     return '''Hello {}\nMy name is Talk-E!'''.format(name)
 
 
-def cool_bro(wtd):
-    return '''That is cool broski!\n{} is one of my favorite things to do!'''.format(
-        wtd)
-
 
 def random_message():
     random_phrase = choice(build_random_phrase_list())
