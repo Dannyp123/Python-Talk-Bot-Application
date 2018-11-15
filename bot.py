@@ -82,6 +82,7 @@ def play_the_guessing_game():
         text = input(">>> ")
         if int(text) == num:
             print("Good Job You Guessed It!")
+            print("To play again, hit 4" + "\n")
             active = False
         elif int(text) > 15:
             print("number must be between 1 and 15")
@@ -91,6 +92,7 @@ def play_the_guessing_game():
             if lives == 0:
                 active = False
                 print('''The winning number was {}'''.format(num))
+                print("\n" + "To play again, hit 4")
 
 
 def main():
