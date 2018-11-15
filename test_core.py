@@ -82,3 +82,45 @@ def test_random_message_2(choice):
     choice.side_effect = ['line3']
 
     assert random_message() == 'line3'
+
+def test_did_they_cross_1():
+    name = 'Bob'
+    quest = ''
+    swallows = ''
+
+    did_they_cross(name, quest, swallows) == False
+
+def test_did_they_cross_2():
+    name = 'Arthur'
+    quest = ''
+    swallows = ''
+
+    did_they_cross(name, quest, swallows) == True
+
+def test_did_they_cross_3():
+    name = 'Arthur'
+    quest = 'Nothing'
+    swallows = ''
+
+    did_they_cross(name, quest, swallows) == False
+
+def test_did_they_cross_4():
+    name = 'Arthur'
+    quest = 'To seek the Holy Grail'
+    swallows = ''
+
+    did_they_cross(name, quest, swallows) == True
+
+def test_did_they_cross_5():
+    name = 'Arthur'
+    quest = 'To seek the Holy Grail'
+    swallows = 'None'
+
+    did_they_cross(name, quest, swallows) == False
+
+def test_did_they_cross_6():
+    name = 'Arthur'
+    quest = 'To seek the Holy Grail'
+    swallows = 'An African or European swallow?'
+
+    did_they_cross(name, quest, swallows) == True
