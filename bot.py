@@ -76,26 +76,33 @@ def home_screen():
 
 
 def play_the_guessing_game():
-    lives = 5
-    num = randint(1, 15)
+    lives = 4
+    num = randint(1, 100)
     active = True
-    print("Guess the number that is from 1 to 15 ONLY!")
-    while (active is True):
+    print("Guess the number that is from 1 to 100 ONLY!")
+    while (lives != 0):
         print()
         text = input(">>> ")
-        if int(text) == num:
-            print("Good Job You Guessed It!")
-            print("To play again, hit 4" + "\n")
-            active = False
-        elif int(text) > 15:
-            print("number must be between 1 and 15")
-        else:
-            print("Sorry...Try again!")
+        if text.isdigit():
             lives = lives - 1
             if lives == 0:
                 active = False
+                print("Sorry... :-(")
                 print('''The winning number was {}'''.format(num))
-                print("\n" + "To play again, hit 4")
+                print("\n" + "To play again, hit 4 or hit --h to see menu")
+            elif int(text) == num:
+                print("Good Job You Guessed It!")
+                print("To play again, hit 4 or hit --h to see menu" + "\n")
+                lives = 0
+                active = False
+            elif int(text) > 100:
+                print("number must be between 1 and 100")
+            elif int(text) < num:
+                print("\n" + "Guess Up")
+            elif int(text) > num:
+                print("\n" + "Guess Down")
+        else:
+            print("Must be a number sir or madam")
 
 
 def crossing_the_bridge():
