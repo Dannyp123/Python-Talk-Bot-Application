@@ -3,6 +3,7 @@ from bcca.test import (
     should_print,
     fake_file,
 )
+from unittest import mock
 
 
 @fake_file({'bot.txt': '''line
@@ -36,7 +37,9 @@ def test_build_random_phrase_list_2():
 line2
 line3
 '''})
-def test_append_phrases_1():
+@mock.patch('bot_disk.profanity.censor')
+def test_append_phrases_1(false):
+    false.side_effect = ['line4', 'line2']
     phrase = 'line4'
     phrase2 = 'line2'
     append_phrases(phrase)
@@ -48,7 +51,9 @@ def test_append_phrases_1():
 line2
 line3
 '''})
-def test_append_phrases_2():
+@mock.patch('bot_disk.profanity.censor')
+def test_append_phrases_2(false):
+    false.side_effect = ['line3', 'line2']
     phrase = 'line3'
     phrase2 = 'line2'
     append_phrases(phrase)
