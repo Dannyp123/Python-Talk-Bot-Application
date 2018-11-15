@@ -104,7 +104,6 @@ def crossing_the_bridge():
     quest = input("What is your quest?\n>>>: ")
     swallows = input("What is the air-speed velocity of an unladen swallow?")
     if did_they_cross(name, quest, swallows) != True:
-        active = False
         print("*You have been flung into the Gorge of Eternal Peril*")
     else:
         print("You have successfully crossed the bridge!")
