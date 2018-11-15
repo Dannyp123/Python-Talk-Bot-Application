@@ -53,6 +53,7 @@ def home_screen():
 
         elif text == "3":
             os.system('curl parrot.live')
+            print('\n\n')
 
         elif text == "4":
             play_the_guessing_game()
