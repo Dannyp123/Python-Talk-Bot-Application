@@ -62,3 +62,23 @@ def test_guessing_game_2(fake_num):
     fake_num.side_effect = [7]
 
     assert guessing_game('8') == False
+
+@fake_file({'bot.txt': '''line1
+line2
+line3
+'''})
+@mock.patch('core_bot.choice')
+def test_random_message_1(choice):
+    choice.side_effect = ['line2']
+
+    assert random_message() == 'line2'
+
+@fake_file({'bot.txt': '''line1
+line2
+line3
+'''})
+@mock.patch('core_bot.choice')
+def test_random_message_2(choice):
+    choice.side_effect = ['line3']
+
+    assert random_message() == 'line3'
