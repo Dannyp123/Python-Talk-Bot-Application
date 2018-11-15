@@ -42,20 +42,6 @@ def test_hello_2():
 
     assert greeting == 'Hello Sara\nMy name is Talk-E!'
 
-def test_cool_bro_1():
-    action = 'running'
-
-    phrase = cool_bro(action)
-
-    assert phrase == 'That is cool broski!\nrunning is one of my favorite things to do!'
-
-def test_cool_bro_2():
-    action = 'cookies'
-
-    phrase = cool_bro(action)
-
-    assert phrase == 'That is cool broski!\ncookies is one of my favorite things to do!'
-
 def test_age():
     time = ctime()
     time = int(time.split()[-1]) - 2018
