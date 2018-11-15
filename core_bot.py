@@ -46,3 +46,16 @@ def guessing_game(text):
 def age():
     time = ctime()
     return "I'm {} years old!".format(int(time.split()[-1]) - 2018)
+
+
+def did_they_cross(name, quest, swallows):
+    if name != "Arthur":
+        return False
+    else:
+        if quest != "To seek the Holy Grail":
+            return False
+        else:
+            if swallows != "An African or European swallow?":
+                return False
+            else:
+                return True
