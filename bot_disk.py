@@ -1,7 +1,7 @@
 def read_txt_file():
     with open('bot.txt', 'r') as file:
         contents = file.read()
-    return contents
+    return contents.strip()
 
 def build_random_phrase_list():
     list = []

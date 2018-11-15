@@ -30,7 +30,6 @@ def hello(name):
     return '''Hello {}\nMy name is Talk-E!'''.format(name)
 
 
-
 def random_message():
     random_phrase = choice(build_random_phrase_list())
     return random_phrase
