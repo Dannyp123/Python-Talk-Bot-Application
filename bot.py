@@ -23,7 +23,7 @@ def greeting():
     name = input("What's your name? ")
     if name in ["Talk-E", "talk-e", "TALK-E", "Talk-e"]:
         print('''OMG... That is my name''' + '\n')
-        print('''Anyways, {} nice to meet you\n'''.format(hello(name)))
+        print('''Anyways, {} nice to meet you\n'''.format(name))
     else:
         print(hello(name))
 
@@ -85,7 +85,7 @@ def play_the_guessing_game():
             if lives == 0:
                 active = False
                 print('''The winning number was {}'''.format(num))
- 
+
 
 def main():
     home_screen()
