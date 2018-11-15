@@ -1,6 +1,7 @@
 from core_bot import *
 import os
 import requests
+from profanity import profanity
 
 
 def greeting():
@@ -38,8 +39,12 @@ def home_screen():
     while (active is True):
         text = input(">>>: ")
         if text not in command_strings:
-            append_phrases(text)
-            print(random_message())
+            if profanity.contains_profanity(text):
+                print("WATCH YO PROFANITY!!")
+            else:
+                append_phrases(text)
+                print(random_message())
+
         elif text == "1":
             print(age())
 
