@@ -42,14 +42,21 @@ def test_hello_2():
 
     assert greeting == 'Hello Sara\nMy name is Talk-E!'
 
-def test_age():
-    time = ctime()
-    time = int(time.split()[-1]) - 2018
-    phrase = "I'm {} years old!".format(time)
+@mock.patch('core_bot.ctime')
+def test_age_1(time):
+    time.side_effect =['2019'] 
 
     bot_age = age()
 
-    assert phrase == bot_age
+    assert bot_age == "I'm 1 years old!"
+
+@mock.patch('core_bot.ctime')
+def test_age_2(time):
+    time.side_effect =['2025'] 
+
+    bot_age = age()
+
+    assert bot_age == "I'm 7 years old!"
 
 @mock.patch('core_bot.randint')
 def test_guessing_game_1(fake_num):
@@ -82,3 +89,45 @@ def test_random_message_2(choice):
     choice.side_effect = ['line3']
 
     assert random_message() == 'line3'
+
+def test_did_they_cross_1():
+    name = 'Bob'
+    quest = ''
+    swallows = ''
+
+    did_they_cross(name, quest, swallows) == False
+
+def test_did_they_cross_2():
+    name = 'Arthur'
+    quest = ''
+    swallows = ''
+
+    did_they_cross(name, quest, swallows) == True
+
+def test_did_they_cross_3():
+    name = 'Arthur'
+    quest = 'Nothing'
+    swallows = ''
+
+    did_they_cross(name, quest, swallows) == False
+
+def test_did_they_cross_4():
+    name = 'Arthur'
+    quest = 'To seek the Holy Grail'
+    swallows = ''
+
+    did_they_cross(name, quest, swallows) == True
+
+def test_did_they_cross_5():
+    name = 'Arthur'
+    quest = 'To seek the Holy Grail'
+    swallows = 'None'
+
+    did_they_cross(name, quest, swallows) == False
+
+def test_did_they_cross_6():
+    name = 'Arthur'
+    quest = 'To seek the Holy Grail'
+    swallows = 'An African or European swallow?'
+
+    did_they_cross(name, quest, swallows) == True
