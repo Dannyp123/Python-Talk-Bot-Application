@@ -19,4 +19,4 @@ def append_phrases(phrase):
     phrases = build_random_phrase_list()
     if phrase not in phrases:
         with open('bot.txt', 'a') as file:
-            file.write(profanity.censor(phrase) + "\n")
+            file.write(phrase + "\n")
