@@ -49,13 +49,7 @@ def age():
 
 
 def did_they_cross(name, quest, swallows):
-    if name != "Arthur":
+    if name != "Arthur" or quest != "To seek the Holy Grail" or swallows != "An African or European swallow?":
         return False
     else:
-        if quest != "To seek the Holy Grail":
-            return False
-        else:
-            if swallows != "An African or European swallow?":
-                return False
-            else:
-                return True
+        return True
